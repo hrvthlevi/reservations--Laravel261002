@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Flight;
 use App\Models\Travel;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +20,9 @@ class TravelFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'evolution' => 'foglalva',
+            'flight:id' => Flight::all()->random()->id,
+            'user_id' => User::all()->random()->id,
         ];
     }
 }
