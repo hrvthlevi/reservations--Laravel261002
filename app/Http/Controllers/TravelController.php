@@ -13,7 +13,7 @@ class TravelController extends Controller
      */
     public function index()
     {
-        //
+        return Travel::all();
     }
 
     /**
@@ -29,7 +29,7 @@ class TravelController extends Controller
      */
     public function store(StoreTravelRequest $request)
     {
-        //
+        $record = new Travel();
     }
 
     /**
