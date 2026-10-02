@@ -21,7 +21,7 @@ class TravelFactory extends Factory
     {
         return [
             'evolution' => 'foglalva',
-            'flight:id' => Flight::all()->random()->id,
+            'flight_id' => Flight::all()->random()->id,
             'user_id' => User::all()->random()->id,
         ];
     }

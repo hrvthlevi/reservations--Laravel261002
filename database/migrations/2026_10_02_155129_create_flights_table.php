@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->foreignId('airline_id')->constrained();
+            $table->Integer('limit');
             $table->timestamps();
         });
         Flight::create([
