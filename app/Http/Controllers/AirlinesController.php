@@ -13,7 +13,7 @@ class AirlinesController extends Controller
      */
     public function index()
     {
-        //
+        return Airlines::al();
     }
 
     /**
@@ -29,7 +29,8 @@ class AirlinesController extends Controller
      */
     public function store(StoreAirlinesRequest $request)
     {
-        //
+        $record = new Airlines();
+        $record->fill($request->all())->save();
     }
 
     /**
@@ -37,7 +38,7 @@ class AirlinesController extends Controller
      */
     public function show(Airlines $airlines)
     {
-        //
+        return $airlines;
     }
 
     /**
@@ -53,7 +54,7 @@ class AirlinesController extends Controller
      */
     public function update(UpdateAirlinesRequest $request, Airlines $airlines)
     {
-        //
+        $airlines->fill($request->all())->save();
     }
 
     /**
@@ -61,6 +62,6 @@ class AirlinesController extends Controller
      */
     public function destroy(Airlines $airlines)
     {
-        //
+        $airlines->delete();
     }
 }
